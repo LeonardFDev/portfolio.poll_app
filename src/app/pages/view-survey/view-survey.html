@@ -7,7 +7,7 @@
             <app-primary-button routerLink="/create-question" [btnText]="'Create survey'" [withIcon]="{'isWithIcon': true, 'icon': '⊕', 'iconWidth':24}" class="header__button"></app-primary-button>
         </header>
 
-        <section class="section" [class.section--al-it-end]="isAlreadyVotes || svService.isAlreadyVotes()">
+        <section class="section">
             <div class="section__loading-window" [class.section__loading-window--hidden]="loadingWindowHidden"></div>
             <article class="section__left">
                 <div class="section__left__header">
@@ -68,7 +68,7 @@
                 </div>
             </article>
                 
-            <article [class.section__right--ma-top200]="!isAlreadyVotes && !svService.isAlreadyVotes() && !isEndDateExceeded()" [class.section__right--clsoe]="isCloseResultsBox" class="section__right">
+            <article [class.section__right--clsoe]="isCloseResultsBox" class="section__right">
                 <h1 class="section__right__h1">Survey results <span class="section__right__h1__span">LIVE</span></h1>
                 @if(isAlreadyVotes || svService.isAlreadyVotes() || isEndDateExceeded()){
                     <div class="section__right__results-box">
