@@ -6,6 +6,7 @@
     align-items: center;
     background-color: #35273A;
     min-height: 100vh;
+    position: relative;
 
     &__body{
         width: 100%;
@@ -16,9 +17,11 @@
         justify-content: center;
         padding: 
         clamp(39px, calc(50.57px - 0.8036vw), 48px) 
-        clamp(16px, 8.48vw - 11.1px, 111px) 
-        clamp(40px, calc(50.29px - 0.7143vw), 48px) 
+        clamp(16px, 8.48vw - 11.1px, 111px)
+        124px 
         clamp(16px, 8.48vw - 11.1px, 111px);
+
+        
     }
 }
 
@@ -138,7 +141,6 @@
     margin-top: clamp(32px, calc(52.57px - 1.4286vw), 48px);
     display: flex;
     flex-direction: column;
-    padding: 0 78px;
     padding: 0 clamp(0px, 7vw - 22.3px, 78px);
 
     &__filters{
@@ -165,6 +167,11 @@
         height: 476px;
         overflow: auto;
         margin-right: -16px;
+
+        &:has(.section__bottom__survey-views-empty){
+            align-content: center;
+            align-self: center;
+        }
         
         @media (max-width:1388px) {
             margin-right: 0;
@@ -191,14 +198,12 @@
 
         &-empty{
             width: max-content;
-            align-content: center;
-            margin-top: 70%;
 
             &__span{
                 background-color: #ffffff3b;
                 padding: 16px;
                 border-radius: 16px;
-                @include mixins.font("Mulish", 24px, white, 600);
+                @include mixins.font("Mulish", 23px, white, 600);
             }
         }
 

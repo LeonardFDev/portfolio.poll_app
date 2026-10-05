@@ -8,10 +8,11 @@ import { FilterButton } from "../../shared/components/filter-button/filter-butto
 import { SurveyView } from "../../shared/components/survey-view/survey-view";
 import { GetSurveyDatabaseService } from '../../shared/services/get-survey-database/get-survey-database';
 import { SurveyQuestionInterFace } from '../../shared/interfaces/survey-question';
+import { Footer } from '../../shared/components/footer/footer';
 
 @Component({
   selector: 'app-main',
-  imports: [PrimaryButton, HeroImage, HighlightsCard, DropDownMenu, FilterButton, SurveyView, RouterLink],
+  imports: [PrimaryButton, HeroImage, HighlightsCard, DropDownMenu, FilterButton, SurveyView, RouterLink, Footer],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })

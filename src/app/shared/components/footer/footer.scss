@@ -1,0 +1,45 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0 0 0 / 30%);
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    bottom: 0;
+    
+    > div{
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 1440px;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: clamp(16px, -33.4px + 15.48vw, 189px);
+
+        > a{
+            text-decoration: none;
+            font-family: "Mulish";
+
+            &:hover{
+                text-decoration: underline;
+            }
+
+        }
+    }
+}
+
+:host(.light_text_color) footer div a{
+    color: #FFB770;
+
+        &:hover{
+            color: #edc092;
+        }
+    }
+
+:host(.dark_text_color) footer div a{
+    color: #221227;
+    
+    &:hover{
+        color: #9659ab;
+    }
+}

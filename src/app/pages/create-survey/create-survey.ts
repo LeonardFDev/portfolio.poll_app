@@ -12,10 +12,11 @@ import { GetSurveyDatabaseService } from '../../shared/services/get-survey-datab
 import { CreateSurveyService } from '../../shared/services/create-survey/create-survey';
 import { AnswerInterface } from '../../shared/interfaces/answer';
 import { noWhitespaceValidator } from '../../shared/validators/no-whitespace';
+import { Footer } from '../../shared/components/footer/footer';
 
 @Component({
   selector: 'app-create-survey',
-  imports: [SurveyStatus, SecondaryButton, DeleteButton, InputField, CreateQuestion, PrimaryButton, DropDownMenu, RouterLink, ReactiveFormsModule],
+  imports: [SurveyStatus, SecondaryButton, DeleteButton, InputField, CreateQuestion, PrimaryButton, DropDownMenu, RouterLink, ReactiveFormsModule, Footer],
   templateUrl: './create-survey.html',
   styleUrl: './create-survey.scss',
 })

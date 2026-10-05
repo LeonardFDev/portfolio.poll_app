@@ -10,10 +10,11 @@ import { FormArray, FormControl, FormGroup } from '@angular/forms';
 import { AnswerInterface } from '../../shared/interfaces/answer';
 import { QuestionInterFace } from '../../shared/interfaces/question';
 import { SurveyVotingService } from '../../shared/services/survey-voting/survey-voting';
+import { Footer } from '../../shared/components/footer/footer';
 
 @Component({
   selector: 'app-view-survey',
-  imports: [PrimaryButton, SurveyStatus, Question, SecondaryButton, Results, RouterLink],
+  imports: [PrimaryButton, SurveyStatus, Question, SecondaryButton, Results, RouterLink, Footer],
   templateUrl: './view-survey.html',
   styleUrl: './view-survey.scss',
 })
