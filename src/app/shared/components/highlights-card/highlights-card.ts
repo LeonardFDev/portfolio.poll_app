@@ -28,7 +28,7 @@ export class HighlightsCard {
     const today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    let endingIn = (new Date(date).getTime() - new Date(today).getTime()) / (1000 * 60 * 60 * 24) + 1;
+    let endingIn = Math.round((new Date(date).getTime() - new Date(today).getTime()) / (1000 * 60 * 60 * 24) + 1);
 
     if(Number(endingIn) <= 0) endingIn = 0;
     this.endingInOutput = String(endingIn);
